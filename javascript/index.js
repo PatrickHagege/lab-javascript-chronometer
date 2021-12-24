@@ -46,6 +46,8 @@ function printSplit() {
 
 function clearSplits() {
   // ... your code goes here
+  let orderedList = document.querySelector('ol');
+  orderedList.innerHTML = '';
 }
 
 function setStopBtn() {
@@ -88,4 +90,8 @@ btnLeftElement.addEventListener('click', () => {
 
 btnRightElement.addEventListener('click', () => {
   printSplit();
+  if (btnRightElement.classList.contains('reset')) {
+    chronometer.reset();
+    clearSplits();
+  }
 });
